@@ -1,0 +1,213 @@
+import flet as ft
+
+# SiteSpy portfolio theme
+BG = "#07101E"
+SURFACE = "#101B2D"
+SURFACE_2 = "#16233A"
+TEXT = "#F8FBFF"
+MUTED = "#A8B6CC"
+ACCENT = "#25C7F7"
+GOLD = "#D8A73E"
+SUCCESS = "#49D28F"
+BORDER = "#273A5D"
+DANGER = "#FFB86B"
+
+STUDENT_NAME = "Nambuli Ndaitavela Ndapwoshisho"
+STUDENT_NUMBER = "224078798"
+TEAM_ROLE = "Frontend and Dashboard UI"
+GITHUB_USERNAME = "Ndaitavela"
+STUDENT_EMAIL = "ndaitavelandapwa059@gmail.com"
+PORTFOLIO_REPOSITORY = "https://github.com/Ndaitavela/NambuliNdaitavelaPortfolio"
+PROJECT_REPOSITORY = "https://github.com/matattiasw-ai/SiteSpy"
+
+
+def pad(horizontal=0, vertical=0):
+    """Version-safe replacement for ft.padding.symmetric()."""
+    return ft.Padding(horizontal, vertical, horizontal, vertical)
+
+
+def all_pad(value):
+    return ft.Padding(value, value, value, value)
+
+
+def chip(text, color=ACCENT):
+    return ft.Container(
+        padding=ft.Padding(12, 7, 12, 7),
+        border_radius=999,
+        bgcolor=color,
+        content=ft.Text(text, size=12, weight=ft.FontWeight.BOLD, color=BG),
+    )
+
+
+def small_label(text, color=MUTED):
+    return ft.Text(text, size=12, color=color, weight=ft.FontWeight.BOLD)
+
+
+def card(title, body, accent=GOLD, footer=None):
+    controls = [
+        ft.Text(title, size=19, weight=ft.FontWeight.W_900, color=TEXT),
+        ft.Container(width=58, height=3, bgcolor=accent, border_radius=6),
+    ]
+    for item in body:
+        if isinstance(item, str):
+            controls.append(ft.Text(item, size=14, color=TEXT))
+        else:
+            controls.append(item)
+    if footer:
+        controls.append(ft.Container(height=6))
+        controls.append(ft.Text(footer, size=13, color=accent, weight=ft.FontWeight.BOLD))
+
+    return ft.Container(
+        padding=all_pad(22),
+        border_radius=24,
+        bgcolor=SURFACE,
+        border=ft.border.all(1, BORDER),
+        content=ft.Column(controls, spacing=11, tight=True),
+    )
+
+
+def evidence_box(title, caption, color=ACCENT):
+    return ft.Container(
+        padding=all_pad(18),
+        border_radius=20,
+        bgcolor=SURFACE_2,
+        border=ft.border.all(1, BORDER),
+        content=ft.Column([
+            ft.Container(width=44, height=44, border_radius=14, bgcolor=color, content=ft.Text("✓", color=BG, size=25, weight=ft.FontWeight.W_900, text_align=ft.TextAlign.CENTER)),
+            ft.Text(title, color=TEXT, size=16, weight=ft.FontWeight.W_900),
+            ft.Text(caption, color=MUTED, size=13),
+        ], spacing=10, tight=True),
+    )
+
+
+def bullet(text):
+    return ft.Row([
+        ft.Container(width=7, height=7, border_radius=999, bgcolor=ACCENT),
+        ft.Text(text, color=TEXT, size=14, expand=True),
+    ], spacing=10, vertical_alignment=ft.CrossAxisAlignment.START)
+
+
+def main(page: ft.Page):
+    page.title = "Nambuli Ndaitavela Ndapwoshisho | SiteSpy Portfolio"
+    page.theme_mode = ft.ThemeMode.DARK
+    page.bgcolor = BG
+    page.scroll = ft.ScrollMode.AUTO
+    page.padding = 0
+    page.window_min_width = 360
+
+    hero = ft.Container(
+        padding=pad(28, 34),
+        bgcolor=BG,
+        content=ft.ResponsiveRow([
+            ft.Container(
+                col={"xs": 12, "md": 7},
+                content=ft.Column([
+                    ft.Row([
+                        ft.Image(src="sitespy-wordmark.svg", width=190, fit=ft.BoxFit.CONTAIN),
+                    ], wrap=True),
+                    ft.Row([chip("Computer Programming I"), chip("SiteSpy Final Showcase", GOLD), chip("Mobile-first portfolio", SUCCESS)], wrap=True, spacing=10, run_spacing=10),
+                    ft.Text(STUDENT_NAME, size=38, weight=ft.FontWeight.W_900, color=TEXT),
+                    ft.Text(f"Student number: {STUDENT_NUMBER} | Role: {TEAM_ROLE}", color=MUTED, size=15),
+                    ft.Text(
+                        "A polished Flet portfolio showing project purpose, owned contribution areas, screen evidence, lessons learned, and final validation notes for the SiteSpy mobile app.",
+                        size=17,
+                        color=TEXT,
+                    ),
+                    ft.Text(f"Portfolio repository: {PORTFOLIO_REPOSITORY}", color=GOLD, selectable=True),
+                    ft.Text(f"SiteSpy project source: {PROJECT_REPOSITORY}", color=MUTED, selectable=True),
+                ], spacing=14),
+            ),
+            ft.Container(
+                col={"xs": 12, "md": 5},
+                padding=all_pad(22),
+                border_radius=26,
+                bgcolor=SURFACE,
+                border=ft.border.all(1, BORDER),
+                content=ft.Column([
+                    ft.Image(src="sitespy-logo.svg", width=96, fit=ft.BoxFit.CONTAIN),
+                    ft.Text("Portfolio Focus", color=TEXT, size=21, weight=ft.FontWeight.W_900),
+                    bullet("Dashboard UI cards and section structure"),
+                    bullet("Theme consistency: navy, cyan, gold"),
+                    bullet("Readable mobile layouts and responsive behavior"),
+                    bullet("Evidence-ready student showcase format"),
+                ], spacing=12, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+            ),
+        ], spacing=18, run_spacing=18),
+    )
+
+    overview = ft.Container(
+        padding=pad(28, 18),
+        content=ft.ResponsiveRow([
+            ft.Container(card("Project Concept", [
+                "SiteSpy is a mobile-first construction/site measurement app. It helps users capture project details, estimate materials, organise site records, and present summaries in a clearer workflow.",
+                ft.Row([chip("React Native", ACCENT), chip("Expo", GOLD), chip("Firebase", SUCCESS)], wrap=True, spacing=8, run_spacing=8),
+            ], ACCENT), col={"xs": 12, "md": 6}),
+            ft.Container(card("My Assigned Area", [
+                "The contribution is focused on frontend work: dashboard cards, section headers, theme consistency, and mobile layout validation for the SiteSpy mobile experience.",
+                ft.Text("Evidence files: src/screens/DashboardScreen.js, src/components/AppCard.js, src/components/SectionHeader.js, src/theme/", color=MUTED, size=13, selectable=True),
+            ], GOLD), col={"xs": 12, "md": 6}),
+        ], spacing=18, run_spacing=18),
+    )
+
+    contributions = ft.Container(
+        padding=pad(28, 18),
+        content=ft.Column([
+            small_label("CONTRIBUTION BREAKDOWN", ACCENT),
+            ft.Text("What this portfolio proves", color=TEXT, size=28, weight=ft.FontWeight.W_900),
+            ft.ResponsiveRow([
+                ft.Container(evidence_box("Dashboard UI", "Cards, sections, spacing, and readable presentation of key app areas.", ACCENT), col={"xs": 12, "sm": 6, "lg": 4}),
+                ft.Container(evidence_box("Theme System", "Consistent dark navy surfaces, cyan calls to action, and gold measurement accents.", GOLD), col={"xs": 12, "sm": 6, "lg": 4}),
+                ft.Container(evidence_box("Mobile Validation", "Android portrait review with attention to spacing, scrolling, and touch-friendly layout.", SUCCESS), col={"xs": 12, "sm": 6, "lg": 4}),
+                ft.Container(evidence_box("Evidence Pack", "Screenshots, branch notes, code references, and showcase-ready explanations.", ACCENT), col={"xs": 12, "sm": 6, "lg": 4}),
+                ft.Container(evidence_box("Documentation", "Student-facing explanation of the role and final delivery responsibilities.", GOLD), col={"xs": 12, "sm": 6, "lg": 4}),
+                ft.Container(evidence_box("Final Review", "Run checks, collect evidence, and push from the correct student Git identity.", SUCCESS), col={"xs": 12, "sm": 6, "lg": 4}),
+            ], spacing=16, run_spacing=16),
+        ], spacing=14),
+    )
+
+    evidence = ft.Container(
+        padding=pad(28, 18),
+        content=ft.ResponsiveRow([
+            ft.Container(card("Screen Evidence To Add", [
+                bullet("Dashboard interface evidence for Android portrait review"),
+                bullet("UI polish evidence showing card, spacing, and theme decisions"),
+                bullet("Code evidence connected to the owned component or screen"),
+                bullet("Validation evidence showing local run or static preview checks"),
+            ], ACCENT, footer="Evidence section prepared for final showcase review."), col={"xs": 12, "md": 6}),
+            ft.Container(card("Final Blog Notes", [
+                "Explain the exact frontend responsibility, how it supports SiteSpy users, what challenge was solved, and what was learned while preparing the final showcase.",
+                ft.Text("Individual contribution video section prepared for the final 1 minute 30 second showcase recording.", color=GOLD, size=14, weight=ft.FontWeight.BOLD),
+            ], SUCCESS), col={"xs": 12, "md": 6}),
+        ], spacing=18, run_spacing=18),
+    )
+
+    validation = ft.Container(
+        padding=pad(28, 18),
+        content=ft.ResponsiveRow([
+            ft.Container(card("Local Run Commands", [
+                ft.Text("python -m pip install -r requirements.txt", color=MUTED, selectable=True),
+                ft.Text("python main.py", color=MUTED, selectable=True),
+                ft.Text("The old ft.padding.symmetric() call was removed. This version uses ft.Padding() and ft.run().", color=DANGER),
+            ], GOLD), col={"xs": 12, "md": 6}),
+            ft.Container(card("Submission Reminder", [
+                f"GitHub identity: {GITHUB_USERNAME} <{STUDENT_EMAIL}>",
+                ft.Text("Deadline: Sunday, 14 June 2026, 23:59", color=GOLD, size=15, weight=ft.FontWeight.W_900),
+            ], SUCCESS), col={"xs": 12, "md": 6}),
+        ], spacing=18, run_spacing=18),
+    )
+
+    footer = ft.Container(
+        padding=pad(28, 26),
+        bgcolor=SURFACE,
+        border=ft.border.only(top=ft.border.BorderSide(1, BORDER)),
+        content=ft.Column([
+            ft.Text("Nambuli Ndaitavela Ndapwoshisho | SiteSpy Portfolio", color=TEXT, size=18, weight=ft.FontWeight.W_900),
+            ft.Text("Prepared as a complete Flet portfolio with a matching static GitHub Pages version in /site.", color=MUTED),
+        ], spacing=8),
+    )
+
+    page.add(hero, overview, contributions, evidence, validation, footer)
+
+
+if __name__ == "__main__":
+    ft.run(main, assets_dir="assets")
