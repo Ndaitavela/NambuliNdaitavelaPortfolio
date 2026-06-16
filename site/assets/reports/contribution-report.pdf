@@ -1,0 +1,133 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2646 >>
+stream
+BT
+/F1 16 Tf
+72 760 Td
+(Nambuli Contribution Report) Tj
+/F1 10 Tf
+0 -24 Td
+(Nambuli Ndaitavela Ndapwoshisho Contribution Report) Tj
+0 -14 Td
+0 -12 Td
+(Student Details) Tj
+0 -14 Td
+0 -12 Td
+(- GitHub username: Ndaitavela) Tj
+0 -14 Td
+(- Email: ndaitavelandapwa059@gmail.com) Tj
+0 -14 Td
+(- Repository: NambuliNdaitavelaPortfolio) Tj
+0 -14 Td
+(- Live portfolio: https://Ndaitavela.github.io/NambuliNdaitavelaPortfolio/) Tj
+0 -14 Td
+(- Project: SiteSpy) Tj
+0 -14 Td
+0 -12 Td
+(Identity Note) Tj
+0 -14 Td
+0 -12 Td
+(This student appears in project records as Nambuli NN and Ndaitavela. This final portfolio u) Tj
+0 -14 Td
+(ses one deployment identity: Nambuli Ndaitavela Ndapwoshisho.) Tj
+0 -14 Td
+0 -12 Td
+(Contribution Area) Tj
+0 -14 Td
+0 -12 Td
+(My contribution focused on the SiteSpy dashboard experience, mobile interface review, card a) Tj
+0 -14 Td
+(nd section structure, theme consistency, and responsive layout checks.) Tj
+0 -14 Td
+0 -12 Td
+(Project Context) Tj
+0 -14 Td
+0 -12 Td
+(SiteSpy is a mobile construction support app that helps users capture project details, revie) Tj
+0 -14 Td
+(w wall measurements, estimate materials, and organise project records for later reporting.) Tj
+0 -14 Td
+0 -12 Td
+(Evidence Files) Tj
+0 -14 Td
+0 -12 Td
+(- `src/screens/DashboardScreen.js`) Tj
+0 -14 Td
+(- `src/components/AppCard.js`) Tj
+0 -14 Td
+(- `src/components/SectionHeader.js`) Tj
+0 -14 Td
+(- `src/theme/`) Tj
+0 -14 Td
+0 -12 Td
+(Challenge and Solution) Tj
+0 -14 Td
+0 -12 Td
+(The main challenge was keeping the dashboard clear on small mobile screens while still showi) Tj
+0 -14 Td
+(ng useful project and estimate information. The solution was to focus on compact cards, read) Tj
+0 -14 Td
+(able section headings, consistent theme colors, and simple responsive layout checks.) Tj
+0 -14 Td
+0 -12 Td
+(Skills Demonstrated) Tj
+0 -14 Td
+0 -12 Td
+(- Mobile UI review) Tj
+0 -14 Td
+(- Dashboard layout planning) Tj
+0 -14 Td
+(- Reusable card and section structure) Tj
+0 -14 Td
+(- Theme consistency) Tj
+0 -14 Td
+(- GitHub workflow) Tj
+0 -14 Td
+(- Static GitHub Pages portfolio deployment) Tj
+0 -14 Td
+0 -12 Td
+(Learning Reflection) Tj
+0 -14 Td
+0 -12 Td
+(I strengthened my understanding of how small interface decisions affect the usability of a m) Tj
+0 -14 Td
+(obile app. I also learned how portfolio evidence, GitHub workflow, and clear documentation h) Tj
+0 -14 Td
+(elp explain an individual contribution in a team project.) Tj
+0 -14 Td
+0 -12 Td
+(Repository Links) Tj
+0 -14 Td
+0 -12 Td
+(- Repository: https://github.com/Ndaitavela/NambuliNdaitavelaPortfolio) Tj
+0 -14 Td
+(- Live portfolio: https://Ndaitavela.github.io/NambuliNdaitavelaPortfolio/) Tj
+0 -14 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Root 1 0 R /Size 6 >>
+startxref
+3009
+%%EOF
