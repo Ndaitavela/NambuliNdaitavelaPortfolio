@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Calculations with Vectors and Matrices",
+    "file": "assets/certificates/Calculations with Vectors and Matrices.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "Explore Data with MATLAB Plots",
+    "file": "assets/certificates/Explore Data with MATLAB Plots.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "Machine Learning Onramp",
+    "file": "assets/certificates/Machine Learning Onramp.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "Make and Manipulate Matrices",
+    "file": "assets/certificates/Make and Manipulate Matrices.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "MATLAB Onramp",
+    "file": "assets/certificates/MATLAB Onramp.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "Simulink Onramp",
+    "file": "assets/certificates/Simulink Onramp.pdf",
+    "type": "PDF certificate"
+  },
+  {
+    "title": "Solve Higher-Order ODEs",
+    "file": "assets/certificates/Solve Higher-Order ODEs.pdf",
+    "type": "PDF certificate"
+  }
+]
