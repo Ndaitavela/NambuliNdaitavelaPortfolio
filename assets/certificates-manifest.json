@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Calculations With Vectors And Matrices",
+    "filename": "Calculations with Vectors and Matrices.pdf",
+    "path": "assets/certificates/matlab/Calculations with Vectors and Matrices.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Explore Data With Matlab Plots",
+    "filename": "Explore Data with MATLAB Plots.pdf",
+    "path": "assets/certificates/matlab/Explore Data with MATLAB Plots.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Machine Learning Onramp",
+    "filename": "Machine Learning Onramp.pdf",
+    "path": "assets/certificates/matlab/Machine Learning Onramp.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Make And Manipulate Matrices",
+    "filename": "Make and Manipulate Matrices.pdf",
+    "path": "assets/certificates/matlab/Make and Manipulate Matrices.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Matlab Onramp",
+    "filename": "MATLAB Onramp.pdf",
+    "path": "assets/certificates/matlab/MATLAB Onramp.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Simulink Onramp",
+    "filename": "Simulink Onramp.pdf",
+    "path": "assets/certificates/matlab/Simulink Onramp.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  },
+  {
+    "title": "Solve Higher Order Odes",
+    "filename": "Solve Higher-Order ODEs.pdf",
+    "path": "assets/certificates/matlab/Solve Higher-Order ODEs.pdf",
+    "category": "MATLAB",
+    "type": "PDF"
+  }
+]
